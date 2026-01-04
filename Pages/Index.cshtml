@@ -1,0 +1,23 @@
+﻿@page
+@model ClassProject.Pages.IndexModel
+@{
+    
+}
+
+@using Microsoft.AspNetCore.Authorization
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var user = HttpContextAccessor.HttpContext.User.Identity;
+    Layout = "Shared/_Layout";
+}
+
+<h2>خوش آمدید!</h2>
+@if (user != null && user.IsAuthenticated)
+{
+    <p>سلام @user.Name عزیز، خوش آمدید!</p>
+}
+else
+{
+    <p>لطفاً <a asp-page="/Login">وارد</a> شوید یا <a asp-page="/Register">ثبت‌نام</a> کنید.</p>
+}

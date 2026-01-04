@@ -1,0 +1,39 @@
+﻿@page
+@model ClassProject.Pages.RegisterModel
+@{
+}
+
+
+<h2>ثبت‌نام</h2>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <form method="post">
+      <div class="mb-3">
+        <label class="form-label">نام</label>
+        <input asp-for="FirstName" class="form-control" placeholder="نام" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">نام خانوادگی</label>
+        <input asp-for="LastName" class="form-control" placeholder="نام خانوادگی" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">ایمیل</label>
+        <input asp-for="Email" type="email" class="form-control" placeholder="ایمیل" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">رمز عبور</label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="رمز عبور" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">تکرار رمز عبور</label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="تکرار رمز عبور" />
+      </div>
+      <button type="submit" class="btn btn-primary">ثبت‌نام</button>
+      <button type="reset" class="btn btn-secondary">پاک کردن</button>
+      @if (Model.Message != null)
+      {
+        <div class="alert alert-danger mt-3">@Model.Message</div>
+      }
+    </form>
+  </div>
+</div>

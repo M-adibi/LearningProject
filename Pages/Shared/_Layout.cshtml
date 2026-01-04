@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>پروژه کلاس دات نت  </title>
+    
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+          crossorigin="anonymous" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" asp-page="/Index">خانه</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a asp-page="Index" class="nav-link">صفحه اصلی</a></li>
+            <li class="nav-item"><a asp-page="Login" class="nav-link" >ورود</a></li>
+            <li class="nav-item"><a asp-page="Register" class="nav-link">ثبت‌نام</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+</body>
+</html>
